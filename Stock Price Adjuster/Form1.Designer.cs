@@ -39,10 +39,10 @@ namespace Stock_Price_Adjuster
             this.newStockValTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.avgTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.markupTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -124,8 +124,8 @@ namespace Stock_Price_Adjuster
             // 
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.markupTextBox);
+            this.groupBox1.Controls.Add(this.avgTextBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -136,13 +136,13 @@ namespace Stock_Price_Adjuster
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Output";
             // 
-            // textBox1
+            // avgTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(179, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(70, 20);
-            this.textBox1.TabIndex = 9;
+            this.avgTextBox.Location = new System.Drawing.Point(179, 24);
+            this.avgTextBox.Name = "avgTextBox";
+            this.avgTextBox.ReadOnly = true;
+            this.avgTextBox.Size = new System.Drawing.Size(70, 20);
+            this.avgTextBox.TabIndex = 9;
             // 
             // label6
             // 
@@ -162,13 +162,13 @@ namespace Stock_Price_Adjuster
             this.label5.TabIndex = 9;
             this.label5.Text = "Average Purchase Value";
             // 
-            // textBox2
+            // markupTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(179, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(70, 20);
-            this.textBox2.TabIndex = 11;
+            this.markupTextBox.Location = new System.Drawing.Point(179, 61);
+            this.markupTextBox.Name = "markupTextBox";
+            this.markupTextBox.ReadOnly = true;
+            this.markupTextBox.Size = new System.Drawing.Size(70, 20);
+            this.markupTextBox.TabIndex = 11;
             // 
             // label7
             // 
@@ -214,6 +214,7 @@ namespace Stock_Price_Adjuster
             this.button1.TabIndex = 16;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buildText
             // 
@@ -271,12 +272,12 @@ namespace Stock_Price_Adjuster
         private System.Windows.Forms.TextBox newStockValTextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox avgTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox markupTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
