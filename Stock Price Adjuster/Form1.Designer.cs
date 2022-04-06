@@ -39,12 +39,12 @@ namespace Stock_Price_Adjuster
             this.newStockValTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.markupTextBox = new System.Windows.Forms.TextBox();
             this.avgTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.markupTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -91,7 +91,7 @@ namespace Stock_Price_Adjuster
             this.oldStockValTextBox.Location = new System.Drawing.Point(182, 38);
             this.oldStockValTextBox.Name = "oldStockValTextBox";
             this.oldStockValTextBox.Size = new System.Drawing.Size(70, 20);
-            this.oldStockValTextBox.TabIndex = 5;
+            this.oldStockValTextBox.TabIndex = 2;
             this.oldStockValTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oldStockValTextBox_KeyPress);
             // 
             // label3
@@ -108,7 +108,7 @@ namespace Stock_Price_Adjuster
             this.newStockValTextBox.Location = new System.Drawing.Point(182, 90);
             this.newStockValTextBox.Name = "newStockValTextBox";
             this.newStockValTextBox.Size = new System.Drawing.Size(70, 20);
-            this.newStockValTextBox.TabIndex = 7;
+            this.newStockValTextBox.TabIndex = 4;
             this.newStockValTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.newStockValTextBox_KeyPress);
             // 
             // label4
@@ -136,13 +136,39 @@ namespace Stock_Price_Adjuster
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Output";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(160, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "£";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(160, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "£";
+            // 
+            // markupTextBox
+            // 
+            this.markupTextBox.Location = new System.Drawing.Point(179, 61);
+            this.markupTextBox.Name = "markupTextBox";
+            this.markupTextBox.ReadOnly = true;
+            this.markupTextBox.Size = new System.Drawing.Size(70, 20);
+            this.markupTextBox.TabIndex = 7;
+            // 
             // avgTextBox
             // 
             this.avgTextBox.Location = new System.Drawing.Point(179, 24);
             this.avgTextBox.Name = "avgTextBox";
             this.avgTextBox.ReadOnly = true;
             this.avgTextBox.Size = new System.Drawing.Size(70, 20);
-            this.avgTextBox.TabIndex = 9;
+            this.avgTextBox.TabIndex = 6;
             // 
             // label6
             // 
@@ -161,32 +187,6 @@ namespace Stock_Price_Adjuster
             this.label5.Size = new System.Drawing.Size(125, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Average Purchase Value";
-            // 
-            // markupTextBox
-            // 
-            this.markupTextBox.Location = new System.Drawing.Point(179, 61);
-            this.markupTextBox.Name = "markupTextBox";
-            this.markupTextBox.ReadOnly = true;
-            this.markupTextBox.Size = new System.Drawing.Size(70, 20);
-            this.markupTextBox.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(160, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "£";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(160, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "£";
             // 
             // label9
             // 
@@ -211,7 +211,7 @@ namespace Stock_Price_Adjuster
             this.button1.Location = new System.Drawing.Point(12, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 23);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
