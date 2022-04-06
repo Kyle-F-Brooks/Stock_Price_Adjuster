@@ -78,7 +78,7 @@ namespace Stock_Price_Adjuster
                 double oldPurchaseTotal = oldQuantity * oldPurchaseVal;
                 double newPurchaseTotal = newQuantity * newPurchaseVal;
                 double averagePurchase = (oldPurchaseTotal + newPurchaseTotal)/(oldQuantity+newQuantity);
-                double markup = 2.4 * averagePurchase;
+                double markup = 2.4 * newPurchaseVal;
                 avgTextBox.Text = averagePurchase.ToString();
                 markupTextBox.Text = markup.ToString();
             }
