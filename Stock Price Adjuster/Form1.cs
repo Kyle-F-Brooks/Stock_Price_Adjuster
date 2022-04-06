@@ -69,17 +69,24 @@ namespace Stock_Price_Adjuster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int oldQuantity = int.Parse(oldStockQtyTextBox.Text);
-            int newQuantity = int.Parse(newStockQtyTextBox.Text);
-            double oldPurchaseVal = double.Parse(oldStockValTextBox.Text);
-            double newPurchaseVal = double.Parse(newStockValTextBox.Text);
-            double oldPurchaseTotal = oldQuantity * oldPurchaseVal;
-            double newPurchaseTotal = newQuantity * newPurchaseVal;
-            double averagePurchase = (oldPurchaseTotal + newPurchaseTotal)/(oldQuantity+newQuantity);
-            double markup = 2.4 * averagePurchase;
+            try
+            {
+                int oldQuantity = int.Parse(oldStockQtyTextBox.Text);
+                int newQuantity = int.Parse(newStockQtyTextBox.Text);
+                double oldPurchaseVal = double.Parse(oldStockValTextBox.Text);
+                double newPurchaseVal = double.Parse(newStockValTextBox.Text);
+                double oldPurchaseTotal = oldQuantity * oldPurchaseVal;
+                double newPurchaseTotal = newQuantity * newPurchaseVal;
+                double averagePurchase = (oldPurchaseTotal + newPurchaseTotal)/(oldQuantity+newQuantity);
+                double markup = 2.4 * averagePurchase;
+                avgTextBox.Text = averagePurchase.ToString();
+                markupTextBox.Text = markup.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please ensure all text boxes are filled out", "Missing parameters", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            avgTextBox.Text = averagePurchase.ToString();
-            markupTextBox.Text = markup.ToString();
 
         }
     }
